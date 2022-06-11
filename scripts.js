@@ -1,13 +1,12 @@
 let contador = 0;
 
 function comidas(food) {
-    const selecionado = document.querySelector(".selecionado");
-    if (selecionado !== null) {
+    const selecionado = document.querySelector(".box-pratos .selecionado");
+    if (selecionado) {
         selecionado.classList.remove("selecionado");
         contador--;
-    } else if (selecionado === null) {
-        food.classList.toggle("selecionado");
-    } else {
+    }
+    if (food !== selecionado) {
         food.classList.add("selecionado");
         contador++;
     }
@@ -15,11 +14,14 @@ function comidas(food) {
 }
 
 function bebidas(liquido) {
-    const selecionado = document.querySelector(".selecionado-bebidas");
+    const selecionado = document.querySelector(
+        ".box-bebidas .selecionado-bebidas"
+    );
     if (selecionado) {
         selecionado.classList.remove("selecionado-bebidas");
         contador--;
-    } else {
+    }
+    if (liquido !== selecionado) {
         liquido.classList.add("selecionado-bebidas");
         contador++;
     }
@@ -28,15 +30,17 @@ function bebidas(liquido) {
 }
 
 function sobremesas(docinho) {
-    const selecionado = document.querySelector(".selecionado-sobremesas");
+    const selecionado = document.querySelector(
+        ".box-sobremesa .selecionado-sobremesas"
+    );
     if (selecionado) {
         selecionado.classList.remove("selecionado-sobremesas");
         contador--;
-    } else if (selecionado === null) {
+    }
+    if (docinho !== selecionado) {
         docinho.classList.add("selecionado-sobremesas");
         contador++;
     }
-
     pedido();
 }
 
