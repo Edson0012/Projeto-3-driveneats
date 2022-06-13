@@ -75,8 +75,9 @@ function pedido() {
 
 function whatsapp() {
     if (pedido()) {
-        const valorTotal = valorComida + valorBebidas + valorSobremesas;
-        const mensagem = `Olá, gostaria de fazer o pedido:\n\- Prato: Frango Yin Yang\n\- Bebida: Coquinha Gelada\n\- Sobremesa: Pudim\n\ Total: R$${valorTotal} `;
+        const valoritens = valorComida + valorBebidas + valorSobremesas;
+        const valorTotal = valoritens.toFixed(2);
+        const mensagem = `Olá, gostaria de fazer o pedido:\n\- Prato: Frango Yin Yang\n\- Bebida: Coquinha Gelada\n\- Sobremesa: Pudim\n\ Total: R$${valorTotal}`;
         const URL = "https://wa.me/5581995442300?text=";
         const encode = encodeURIComponent(mensagem);
 
