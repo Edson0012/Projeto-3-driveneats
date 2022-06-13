@@ -102,26 +102,22 @@ section {
         inset 0px 0px 0px 5px #32b72f;
 }
 
-.confirmar {
+.valor {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.confirmar img {
-    display: none;
+.valor img {
+    opacity: 0;
 }
 .comidas.selecionado div > img {
-    display: flex;
+    opacity: 1;
 }
 .bebidas.selecionado-bebidas div > img {
-    display: flex;
+    opacity: 1;
 }
 .sobremesas.selecionado-sobremesas div > img {
-    display: flex;
-}
-
-ion-icon {
-    display: none;
+    opacity: 1;
 }
 
 .detalhes {
@@ -147,11 +143,7 @@ footer {
     align-items: center;
 }
 
-.fundo-footer {
-    background-color: #32b72f;
-}
-
-footer div {
+footer button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,6 +151,10 @@ footer div {
     height: 61px;
     background: #cbcbcb;
     border-radius: 50px;
+    border-style: none;
+}
+.fundo-footer {
+    background-color: #32b72f;
 }
 
 .p-footer {
