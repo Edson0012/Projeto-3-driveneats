@@ -16,7 +16,7 @@ function comidas(food) {
     }
     const valor = food.querySelector(".valor h3 span");
     valorComida = Number(valor.innerHTML.replace(",", "."));
-    console.log(valorComida);
+
     pedido();
 }
 
@@ -35,7 +35,6 @@ function bebidas(liquido) {
     }
     const valor = liquido.querySelector(".valor h3 span");
     valorBebidas = Number(valor.innerHTML.replace(",", "."));
-    console.log(valorBebidas);
     pedido();
 }
 
@@ -54,7 +53,6 @@ function sobremesas(docinho) {
     }
     const valor = docinho.querySelector(".valor h3 span");
     valorSobremesas = Number(valor.innerHTML.replace(",", "."));
-    console.log(valorSobremesas);
 
     pedido();
 }
@@ -81,7 +79,6 @@ function whatsapp() {
         const mensagem = `Olá, gostaria de fazer o pedido:\n\- Prato: Frango Yin Yang\n\- Bebida: Coquinha Gelada\n\- Sobremesa: Pudim\n\ Total: R$${valorTotal} `;
         const URL = "https://wa.me/5581995442300?text=";
         const encode = encodeURIComponent(mensagem);
-        console.log(encode);
 
         window.open(URL + encode, "_blank");
     }
